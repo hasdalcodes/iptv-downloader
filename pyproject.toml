@@ -1,0 +1,37 @@
+[build-system]
+requires = ["setuptools>=61"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "iptv-downloader"
+version = "7.0.0"
+description = "Xtream Codes IPTV browser and resumable download manager with poster previews (Tk)"
+readme = "README.md"
+license = { text = "MIT" }
+authors = [{ name = "hasdalcodes" }]
+requires-python = ">=3.9"
+dependencies = ["requests>=2.28"]
+classifiers = [
+    "Programming Language :: Python :: 3",
+    "License :: OSI Approved :: MIT License",
+    "Environment :: X11 Applications",
+    "Topic :: Multimedia :: Video",
+]
+
+[project.optional-dependencies]
+posters = ["Pillow>=9.1"]
+arabic = ["arabic-reshaper>=3.0", "python-bidi>=0.4"]
+all = ["Pillow>=9.1", "arabic-reshaper>=3.0", "python-bidi>=0.4"]
+dev = ["pytest>=7", "pyflakes>=3"]
+
+[project.scripts]
+iptv-downloader = "iptv_downloader.app:main"
+
+[project.urls]
+Homepage = "https://github.com/hasdalcodes/iptv-downloader"
+
+[tool.setuptools]
+packages = ["iptv_downloader"]
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]

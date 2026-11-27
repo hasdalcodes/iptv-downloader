@@ -1,0 +1,23 @@
+# Python
+__pycache__/
+*.py[cod]
+*.egg-info/
+build/
+dist/
+.pytest_cache/
+
+# Virtual environments
+.venv/
+venv/
+
+# Downloads and app state that must never be committed
+*.part
+config.json
+queue.json
+.iptv_tk_config.json
+
+# Editors / OS
+.idea/
+.vscode/
+*.swp
+.DS_Store

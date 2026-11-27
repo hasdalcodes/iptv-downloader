@@ -1,0 +1,6 @@
+requests>=2.28
+# Posters: decodes JPEG/WebP and resizes. Without it only PNG/GIF posters show.
+Pillow>=9.1
+# Optional: connected right-to-left Arabic text in Tk on X11.
+arabic-reshaper>=3.0
+python-bidi>=0.4
